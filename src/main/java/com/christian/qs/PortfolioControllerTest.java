@@ -19,10 +19,13 @@ public class PortfolioControllerTest {
         Model model = new ConcurrentModel();
         portfolioController.viewPortfolio(model);
 
-        Collection<String> positions = (Collection<String> model.getAttribute("position"));
+        Collection<PositionDto> positions = (Collection<PositionDto> model.getAttribute("positions"));
+
+        PositionDto expectedDto = new PositionDto(
+                "AAPL" , "C","1","Oct 16 2020", "125.00","6.40","640.00","6.35",  "635.00", "($5.00)", "(8%)");
 
         assertThat(positions)
-                .contains("AAPL   |  C  |   1 | Oct 16 20  | 125.00 |      6.40 |     640.00 |         6.35  | 635.00 |   ($5.00) |   (8%)  |");
+                .contains(expectedDto);
     }
 
 }
