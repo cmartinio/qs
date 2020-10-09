@@ -60,6 +60,7 @@ Overall Net: 4.00 + 4.20
 Infrastructure:
 
 Database - relational
+Currently exploring an option to use a noSql DB, 
 Pricing API - for equities: IEX, options: Tradier
 Broker API (optional)
 Importing portfolio from spreadsheet/CSV
